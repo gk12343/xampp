@@ -1,0 +1,52 @@
+<!-- hotel-dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Dashboard</title>
+    <script>
+        let ws;
+
+        window.onload = function() {
+            const hotelName = prompt('Enter Hotel Name:');
+            ws = new WebSocket('ws://localhost:8080/');
+
+            ws.onopen = function() {
+                console.log('Connected to WebSocket server');
+                ws.send(JSON.stringify({ action: 'register_hotel', hotel_name: hotelName }));
+            };
+
+            ws.onmessage = function(event) {
+                const data = JSON.parse(event.data);
+				console.log(data)
+                if (data.hotel_name) {
+				
+					
+                    // Show the order details
+                    const orderDetails = document.getElementById('order_details');
+                    orderDetails.innerHTML = `
+                        <h3>Order Details</h3>
+                        <p><strong>Hotel:</strong> ${data.hotel_name}</p>
+                        <p><strong>Table:</strong> ${data.table_number}</p>
+                        <p><strong>Order:</strong> ${data.order_details}</p>
+                        <button onclick="acceptOrder('${data.hotel_name}', '${data.table_number}')">Accept</button>
+                        <button onclick="rejectOrder('${data.hotel_name}', '${data.table_number}')">Reject</button>
+                    `;
+                }
+            };
+
+            function acceptOrder(hotelName, tableNumber) {
+                ws.send(JSON.stringify({ action: 'accept', hotel_name: hotelName, table_number: tableNumber }));
+            }
+
+            function rejectOrder(hotelName, tableNumber) {
+                ws.send(JSON.stringify({ action: 'reject', hotel_name: hotelName, table_number: tableNumber }));
+            }
+        };
+    </script>
+</head>
+<body>
+    <div id="order_details"></div>
+</body>
+</html>

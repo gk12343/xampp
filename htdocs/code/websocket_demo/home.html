@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        #message-container {
+            border: 1px solid #ccc;
+            height: 300px;
+            width: 500px;
+            overflow-y: scroll;
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        textarea {
+            width: 100%;
+            height: 50px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>User Dashboard</h2>
+
+<!-- Message container where incoming messages will be displayed -->
+<div id="message-container"></div>
+
+<!-- Message input area -->
+<textarea id="message-input" placeholder="Type your message here..."></textarea>
+
+<!-- Send message button -->
+<button id="send-message-button">Send Message</button>
+
+<script>
+// Assuming you have a user ID (this could be dynamically generated via PHP session or JWT)
+let userId = 'admin1';  // This would be dynamically generated based on user authentication
+
+// Connect to the WebSocket server
+const socket = new WebSocket('ws://localhost:8080/chat');  // Change to your WebSocket server URL
+
+// When the WebSocket is opened
+socket.onopen = function() {
+    console.log("Connected to WebSocket server.");
+};
+
+// When a message is received from the WebSocket server
+socket.onmessage = function(event) {
+    const data = JSON.parse(event.data);
+    if (data.message) {
+        displayMessage(data);
+    }
+};
+
+// Send a message to the WebSocket server
+function sendMessage(message) {
+    const data = {
+        userId: userId,
+        message: message
+    };
+    socket.send(JSON.stringify(data));
+}
+
+// Display the message in the message container
+function displayMessage(data) {
+    const messageContainer = document.getElementById('message-container');
+    const messageElement = document.createElement('div');
+    messageElement.textContent = `${data.from}: ${data.message}`;
+    messageContainer.appendChild(messageElement);
+}
+
+// Add event listener to the Send button
+document.getElementById('send-message-button').addEventListener('click', function() {
+    const message = document.getElementById('message-input').value;
+    if (message.trim() !== '') {
+        sendMessage(message);
+        document.getElementById('message-input').value = '';  // Clear the input field
+    }
+});
+</script>
+
+</body>
+</html>

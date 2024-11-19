@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Order System</title>
+  <script>
+    let socket;
+
+    // Connect to WebSocket server
+    function connect() {
+      socket = new WebSocket('ws://localhost:8080');
+      
+      socket.onopen = function() {
+        console.log("Connected to WebSocket server");
+
+        // Register hotel 'gk'
+        socket.send(JSON.stringify({
+          action: 'register_hotel',
+          hotel_name: 'gk'
+        }));
+      };
+
+      socket.onmessage = function(event) {
+        console.log('Message from server:', event.data);
+      };
+    }
+
+    // Send an order to hotel 'gk'
+    function sendOrder() {
+      const order = {
+        hotel_name: 'gk',
+        table_number: 1,
+        order_details: {
+          items: ['Dish 1', 'Dish 2'],
+          note: 'Extra sauce on the side'
+        }
+      };
+
+      socket.send(JSON.stringify(order));
+      console.log("Order sent:", order);
+    }
+
+    // Connect when the page loads
+    window.onload = connect;
+  </script>
+</head>
+<body>
+  <h1>Hotel Order System</h1>
+  <button onclick="sendOrder()">Send Order to Hotel 'gk'</button>
+</body>
+</html>

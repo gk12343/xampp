@@ -1,0 +1,46 @@
+[Mon Nov 18 22:37:06.284802 2024] [ssl:warn] [pid 7192:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 22:37:06.318567 2024] [ssl:warn] [pid 7192:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 22:37:06.357639 2024] [mpm_winnt:notice] [pid 7192:tid 424] AH00455: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 configured -- resuming normal operations
+[Mon Nov 18 22:37:06.357639 2024] [mpm_winnt:notice] [pid 7192:tid 424] AH00456: Apache Lounge VS17 Server built: Oct 18 2023 13:03:18
+[Mon Nov 18 22:37:06.357639 2024] [core:notice] [pid 7192:tid 424] AH00094: Command line: 'C:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Mon Nov 18 22:37:06.372639 2024] [mpm_winnt:notice] [pid 7192:tid 424] AH00418: Parent: Created child process 13204
+[Mon Nov 18 22:37:06.655569 2024] [ssl:warn] [pid 13204:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 22:37:06.688475 2024] [ssl:warn] [pid 13204:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 22:37:06.724697 2024] [mpm_winnt:notice] [pid 13204:tid 440] AH00354: Child: Starting 150 worker threads.
+[Mon Nov 18 23:07:08.915487 2024] [ssl:warn] [pid 3436:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 23:07:08.953031 2024] [ssl:warn] [pid 3436:tid 424] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 23:07:08.983268 2024] [mpm_winnt:notice] [pid 3436:tid 424] AH00455: Apache/2.4.58 (Win64) OpenSSL/3.1.3 PHP/8.2.12 configured -- resuming normal operations
+[Mon Nov 18 23:07:08.983268 2024] [mpm_winnt:notice] [pid 3436:tid 424] AH00456: Apache Lounge VS17 Server built: Oct 18 2023 13:03:18
+[Mon Nov 18 23:07:08.983268 2024] [core:notice] [pid 3436:tid 424] AH00094: Command line: 'c:\\xampp\\apache\\bin\\httpd.exe -d C:/xampp/apache'
+[Mon Nov 18 23:07:08.994895 2024] [mpm_winnt:notice] [pid 3436:tid 424] AH00418: Parent: Created child process 5000
+[Mon Nov 18 23:07:09.320988 2024] [ssl:warn] [pid 5000:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 23:07:09.420546 2024] [ssl:warn] [pid 5000:tid 440] AH01909: www.example.com:443:0 server certificate does NOT include an ID which matches the server name
+[Mon Nov 18 23:07:09.496763 2024] [mpm_winnt:notice] [pid 5000:tid 440] AH00354: Child: Starting 150 worker threads.
+[Mon Nov 18 23:15:09.991670 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60093] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:15:51.441076 2024] [php:warn] [pid 5000:tid 1856] [client ::1:60095] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:15:59.509662 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60096] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:16:52.655148 2024] [php:warn] [pid 5000:tid 1860] [client ::1:60113] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:22:13.368136 2024] [php:warn] [pid 5000:tid 1860] [client ::1:60134] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:22:49.591725 2024] [php:warn] [pid 5000:tid 1860] [client ::1:60141] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:23:52.088221 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60144] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 23, referer: http://localhost/code/login.php
+[Mon Nov 18 23:23:52.088221 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60144] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 26, referer: http://localhost/code/login.php
+[Mon Nov 18 23:31:23.741847 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60215] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:31:32.337384 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60216] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:31:37.948458 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60219] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:31:48.807607 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60220] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:32:01.684317 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60222] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 22, referer: http://localhost/code/login.php
+[Mon Nov 18 23:33:16.400118 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60227] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:33:32.418489 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60236] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:33:39.774575 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60238] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:35:01.254902 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60252] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:35:48.530520 2024] [php:warn] [pid 5000:tid 1848] [client ::1:60259] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 21, referer: http://localhost/code/login.php
+[Mon Nov 18 23:41:19.442254 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60298] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 31, referer: http://localhost/code/login.php
+[Mon Nov 18 23:41:37.961336 2024] [php:warn] [pid 5000:tid 1844] [client ::1:60299] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\login.php on line 31, referer: http://localhost/code/login.php
+[Mon Nov 18 23:55:58.368944 2024] [php:error] [pid 5000:tid 1844] [client ::1:60362] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown database 'your_db' in C:\\xampp\\htdocs\\code\\register.php:13\nStack trace:\n#0 C:\\xampp\\htdocs\\code\\register.php(13): mysqli->__construct('localhost', 'root', Object(SensitiveParameterValue), 'your_db', 3406)\n#1 {main}\n  thrown in C:\\xampp\\htdocs\\code\\register.php on line 13
+[Mon Nov 18 23:56:44.525644 2024] [php:warn] [pid 5000:tid 1852] [client ::1:60368] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\register.php on line 68, referer: http://localhost/code/register.php
+[Mon Nov 18 23:57:00.822061 2024] [php:warn] [pid 5000:tid 1844] [client ::1:60370] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\register.php on line 68, referer: http://localhost/code/register.php
+[Mon Nov 18 23:57:46.002456 2024] [php:warn] [pid 5000:tid 1844] [client ::1:60374] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\register.php on line 68, referer: http://localhost/code/register.php
+[Mon Nov 18 23:59:42.258337 2024] [php:error] [pid 5000:tid 1852] [client ::1:60381] PHP Parse error:  Unmatched '}' in C:\\xampp\\htdocs\\code\\register.php on line 89, referer: http://localhost/code/register.php
+[Mon Nov 18 23:59:54.087699 2024] [php:warn] [pid 5000:tid 1844] [client ::1:60382] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\register.php on line 70, referer: http://localhost/code/register.php
+[Tue Nov 19 00:00:25.241979 2024] [php:warn] [pid 5000:tid 1844] [client ::1:60387] PHP Warning:  Undefined array key "password" in C:\\xampp\\htdocs\\code\\register.php on line 70, referer: http://localhost/code/register.php
+[Tue Nov 19 00:04:07.515699 2024] [php:warn] [pid 5000:tid 1856] [client ::1:60477] PHP Warning:  Undefined array key "username" in C:\\xampp\\htdocs\\code\\register.php on line 23, referer: http://localhost/code/register.php
